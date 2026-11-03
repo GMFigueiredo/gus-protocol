@@ -13,8 +13,9 @@ Every version combines the [shared protocol](protocol.md) with one profile:
 | [School](profiles/school.md) | Learning school subjects, working through exercises, and developing explanations |
 | [University](profiles/university.md) | Advanced study, disciplinary reasoning, research reading, and academic projects |
 | [Workplace](profiles/workplace.md) | Learning through investigations and producing work the human can explain and own |
+| [Software development](profiles/software-development.md) | Pairing on code, debugging, and design through small working changes reviewed together |
 
-[Voice](components/voice.md) is a component of all three versions. The partner layer records the person's main interaction mode and activates the appropriate voice instructions. Dictating a message and listening to a response are separate preferences.
+[Voice](components/voice.md) applies to every profile. The partner layer records the person's main interaction mode and activates the appropriate voice instructions. Dictating a message and listening to a response are separate preferences.
 
 ## How the collaboration works
 
@@ -42,7 +43,9 @@ Download or clone this repository and make the folder available to your agent. F
 Read protocol.md and profiles/school.md. Use the GUS Protocol for this conversation. Reuse any partner details already available. Ask only for missing setup details, including how I mainly interact, and then help me with my task. Apply the voice component when relevant. Do not install anything or change my default working instructions.
 ```
 
-Replace `profiles/school.md` with `profiles/university.md` or `profiles/workplace.md` as appropriate. If the agent is working outside the repository folder, include the folder's path. The agent must be able to read these files; otherwise supply the core, selected profile, and voice component as attachments or text.
+Replace `profiles/school.md` with `profiles/university.md`, `profiles/workplace.md`, or `profiles/software-development.md` as appropriate. If the agent is working outside the repository folder, include the folder's path. The agent must be able to read these files; otherwise supply the core, selected profile, and voice component as attachments or text.
+
+For software development, ask the agent to read `protocol.md` and `profiles/software-development.md`. Together, trace the relevant behavior and agree on a short sequence of working changes. The agent builds and checks one increment, shows the behavior and important code, then stops for discussion and a go-ahead. Pair review and rubber ducking run in both directions. Later steps adapt to what you learn; approving the outline does not waive the pauses.
 
 The files are ordinary Markdown instructions. They do not depend on a particular model, a skill installer, or integrations. A skill wrapper can be added later if useful for discovery; it would load these instructions rather than define a second protocol.
 
@@ -50,13 +53,15 @@ The files are ordinary Markdown instructions. They do not depend on a particular
 
 The core explains how to reuse or save a small partner record in the person's designated personal instruction file. The record includes interaction preferences. It does not change the default working style or contain task history. If no personal file is designated, use the details in the current conversation and offer persistence without blocking the task.
 
-## Readings and source-based changes
+## Research and sources
 
-The first source-based revision uses the four PDFs Gus supplied: Cognitive Apprenticeship, Chi et al. on self-explanation, Sweller's chapter on cognitive load, and Bastani et al. on AI-assisted mathematics. The [source notes](references/source-notes.md) identify the passages, their implications, and the changes made.
+The learning guidance draws on four readings: Cognitive Apprenticeship, Chi et al. on self-explanation, Sweller's chapter on cognitive load, and Bastani et al. on AI-assisted mathematics. The [source notes](references/source-notes.md) identify relevant passages and explain how they inform the instructions.
 
-The resulting instructions make guidance responsive to prior knowledge, use focused self-explanations, provide a path from worked examples through partial completion to less supported use, verify teaching content, and account for the memory demands of voice. These sources inform the design; they do not establish the effectiveness of GUS itself.
+The instructions make guidance responsive to prior knowledge, use focused self-explanations, provide a path from worked examples through partial completion to less supported use, verify teaching content, and account for the memory demands of voice. These sources inform the design; they do not establish the effectiveness of GUS itself.
 
-The [reading list](references/reading-list.md) distinguishes supplied readings from optional further work. The original voice article is no longer needed for this revision because Sweller's supplied chapter addresses the relevant effects.
+The [reading list](references/reading-list.md) records reviewed sources and suggests further reading. Sweller's chapter provides the source for the voice guidance on memory demands.
+
+The software development profile draws on the [Agile Manifesto](https://agilemanifesto.org/) and its [principles](https://agilemanifesto.org/principles.html). Its pairing loop and required review pauses apply those principles to human–agent work. They are GUS design choices, documented in the [source notes](references/source-notes.md#6-software-development-agile-principles).
 
 ## License and attribution
 

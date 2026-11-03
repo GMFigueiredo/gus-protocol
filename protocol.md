@@ -27,7 +27,7 @@ The agent contributes explanations, methods, research, implementation, and verif
 
 ### 1.2 Load the relevant components
 
-Read one profile when the setting is known: [school](profiles/school.md), [university](profiles/university.md), or [workplace](profiles/workplace.md). Reuse a choice already supplied. Ask which setting matters only when the ambiguity changes how to help; do not impose a profile-selection interview on an obvious task.
+Read one profile when the setting is known: [school](profiles/school.md), [university](profiles/university.md), [workplace](profiles/workplace.md), or [software development](profiles/software-development.md). Use the software development profile for implementation, debugging, and technical design, including in a workplace setting; use the workplace profile for business investigations. Reuse a choice already supplied. Ask which setting matters only when the ambiguity changes how to help; do not impose a profile-selection interview on an obvious task.
 
 Profiles specialize this core. The [voice component](components/voice.md) applies across profiles when interaction preferences or the current situation call for it. Load it when partner setup indicates voice or mixed interaction. Do not load every profile or treat examples as task defaults.
 
