@@ -46,7 +46,7 @@ The supplied set is sufficient for the present revision. Further readings below 
 
 **Why:** Offers distinctions between passive, active, constructive, and interactive engagement that can help interrogate apparent participation.
 
-**Protocol decision to examine:** Whether the buddy is generating an inference or integrating ideas, rather than merely taking turns. Do not turn these categories into automatic scores based on message length or speaking time.
+**Protocol decision to examine:** Whether the partner is generating an inference or integrating ideas, rather than merely taking turns. Do not turn these categories into automatic scores based on message length or speaking time.
 
 ### 5. Voice can also make learning harder
 

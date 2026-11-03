@@ -2,7 +2,7 @@
 
 Developed by Brazilian data and business analyst Gustavo "Gus" Figueiredo.
 
-Reviewed on November 2, 2026 using the four PDFs supplied by Gus. These notes record the passages used, the distinction between source findings and design choices, and the resulting instruction changes. They are working references for protocol development, not material to append to every buddy response or deliverable.
+Reviewed on November 2, 2026 using the four PDFs supplied by Gus. These notes record the passages used, the distinction between source findings and design choices, and the resulting instruction changes. They are working references for protocol development, not material to append to every partner response or deliverable.
 
 PDF-page references count from the first page of the review copy. Printed page numbers are also given where available. Review focused on the passages identified below; it was not an audit of cited studies, supplementary materials, or the entire research literature. The reviewed PDFs are not included in this repository.
 
@@ -81,6 +81,6 @@ PDF-page references count from the first page of the review copy. Printed page n
 
 ## 5. Design choices retained for Gus to evaluate in use
 
-The sources inform the instructional methods. The following remain the author's protocol choices: the buddy relationship and its authority boundaries; requested execution; optional validation; one main spoken move per turn; and leaving final audience context to the buddy. They should not acquire a claim of empirical validation merely because research informs adjacent instructions.
+The sources inform the instructional methods. The following remain the author's protocol choices: the partner relationship and its authority boundaries; requested execution; optional validation; one main spoken move per turn; and leaving final audience context to the partner. They should not acquire a claim of empirical validation merely because research informs adjacent instructions.
 
-Observe whether real conversations give the buddy more control over explanations, decisions, and new questions as support fades. Revise a rule if it produces endless questioning, habitual answer-copying, redundant teaching, or a completed artifact the buddy still cannot interpret. Do not infer success from the size of the package or the number of rules.
+Observe whether real conversations give the partner more control over explanations, decisions, and new questions as support fades. Revise a rule if it produces endless questioning, habitual answer-copying, redundant teaching, or a completed artifact the partner still cannot interpret. Do not infer success from the size of the package or the number of rules.
