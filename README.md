@@ -4,30 +4,35 @@ Developed by Brazilian data and business analyst Gustavo "Gus" Figueiredo.
 
 GUS is a protocol for working and learning with an AI partner while retaining curiosity, understanding, judgment, and ownership. It develops the collaborative approach of Gus's LFI Protocol for broader settings.
 
-## Choose a version
+## Choose a profile
 
-Every version combines the [shared protocol](protocol.md) with one profile:
+Start with [General / everyday use](profiles/general.md), a short profile you can use on its own. For a specialist setting, combine the [shared protocol](protocol.md) with the relevant profile:
 
-| Version | Use it for |
+| Profile | Use it for |
 | --- | --- |
+| [General / everyday use](profiles/general.md) (default) | Everyday questions, curiosity, personal planning, creative work, and conversation |
 | [School](profiles/school.md) | Learning school subjects, working through exercises, and developing explanations |
 | [University](profiles/university.md) | Advanced study, disciplinary reasoning, research reading, and academic projects |
-| [Workplace](profiles/workplace.md) | Learning through investigations and producing work the human can explain and own |
+| [Workplace analysis](profiles/workplace.md) | Learning through investigations and producing work the human can explain and own |
 | [Software development](profiles/software-development.md) | Pairing on code, debugging, and design through small working changes reviewed together |
 
-[Voice](components/voice.md) applies to every profile. The partner layer records the person's main interaction mode and activates the appropriate voice instructions. Dictating a message and listening to a response are separate preferences.
+During first partner setup, the agent presents all five profiles and asks what you mainly use AI for. You can choose several or begin with General. A clear request can proceed first; setup questions do not block an ordinary answer. You can switch profiles at any time.
+
+[Voice](components/voice.md) applies to every profile. Partner setup records the person's main interaction mode and activates the appropriate voice instructions. Dictating a message and listening to a response are separate preferences.
 
 ## How the collaboration works
 
 The [shared protocol](protocol.md#2-layers-and-transitions) defines five layers:
 
-1. **Partner:** reuse or establish the person's name, relevant context, and interaction preferences.
+1. **Partner:** reuse or establish the person's name, main uses, optional default profile, and interaction preferences.
 2. **Context:** establish the goal, audience, and requirements; read requested material, then invite thoughts or offer help going through it. Reflection is optional.
 3. **Investigation:** use that context to locate the starting point, choose useful support, and agree on the next unit of work.
 4. **Production and learning:** explain or build the accepted increment, check it, show it, and pause for discussion and a go-ahead before the next.
 5. **Validation (optional):** offer relevant feedback or rehearsal; the partner decides what to change.
 
 Resume at the earliest unresolved point. Reuse available context and do not turn a specific mechanical request into a new interview.
+
+General distills this approach for everyday use: answer direct questions directly, offer explanations or thinking help when useful, preserve the person's judgment and voice, and keep the work proportionate. A simple answer can be complete without a lesson. Substantial work still uses reviewed increments.
 
 ## Working modes
 
@@ -40,10 +45,10 @@ For an emergency or another task that needs uninterrupted execution, say somethi
 Download or clone this repository and make the folder available to your agent. From the repository folder, paste:
 
 ```text
-Read protocol.md and profiles/school.md. Use the GUS Protocol for this conversation. Reuse any partner details already available. Ask only for missing setup details, including how I mainly interact, and then help me with my task. Apply the voice component when relevant. Do not install anything or change my default working instructions.
+Read profiles/general.md and use the GUS Protocol for this conversation. Reuse any partner details already available. During setup, present the available profiles and ask about my main uses if unknown; help with a clear request first. Ask only for missing interaction preferences and apply the voice component when relevant. If I choose a specialist profile or my task clearly calls for one, read protocol.md and that profile. Do not install anything or change my default working instructions.
 ```
 
-Replace `profiles/school.md` with `profiles/university.md`, `profiles/workplace.md`, or `profiles/software-development.md` as appropriate. If the agent is working outside the repository folder, include the folder's path. The agent must be able to read these files; otherwise supply the core, selected profile, and voice component as attachments or text.
+For a specialist setting, ask the agent to read `protocol.md` plus `profiles/school.md`, `profiles/university.md`, `profiles/workplace.md`, or `profiles/software-development.md`. If the agent is working outside the repository folder, include the folder's path. The agent must be able to read the required files; otherwise supply the General profile, or the core and selected specialist profile, as attachments or text. Include the voice component when relevant.
 
 For software development, ask the agent to read `protocol.md` and `profiles/software-development.md`. Together, trace the relevant behavior and agree on a short sequence of working changes. The agent builds and checks one increment, shows the behavior and important code, then stops for discussion and a go-ahead. Pair review and rubber ducking run in both directions. Later steps adapt to what you learn; approving the outline does not waive the pauses.
 
@@ -51,7 +56,7 @@ The files are ordinary Markdown instructions. They do not depend on a particular
 
 ## Partner persistence
 
-The core explains how to reuse or save a small partner record in the person's designated personal instruction file. The record includes interaction preferences. It does not change the default working style or contain task history. If no personal file is designated, use the details in the current conversation and offer persistence without blocking the task.
+The core explains how to reuse or save a small partner record in the person's designated personal instruction file. It includes stated main uses, interaction preferences, and a default profile only if explicitly chosen. A profile chosen for one task does not become a permanent default; a saved default applies when it fits the current task. If no personal file is designated, use the details in the current conversation and offer persistence without blocking the task. Saving these preferences does not install GUS as a default working style or store task history.
 
 ## Research and sources
 
