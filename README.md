@@ -2,7 +2,35 @@
 
 Developed by Brazilian data and business analyst Gustavo "Gus" Figueiredo.
 
-GUS is a protocol for working and learning with an AI partner while retaining curiosity, understanding, judgment, and ownership. It develops the collaborative approach of Gus's LFI Protocol for broader settings.
+GUS is a set of instructions that helps your AI assistant act as a Socratic collaborator: asking relevant questions, helping you think through a problem, and suggesting approaches when you want help. You stay involved in the reasoning and decisions, so you can understand and explain what you produce together.
+
+The AI can research, write, and build. For longer tasks, it agrees on small pieces with you, completes one, and stops to show the work and discuss it before continuing. Simple questions still get direct answers.
+
+The goal is to keep learning and curiosity part of using AI, and avoid the habit of handing in work you cannot explain. This addresses the problem described in Molly Graham's [Lazy F'ing Interns](https://mollyg.substack.com/p/lazy-fucking-interns): passing along work without enough understanding or judgment. GUS develops the author's LFI Protocol for everyday use, school, university, workplace analysis, and software development.
+
+## How to install
+
+You can try GUS in one conversation or make it your usual working style. The instructions are ordinary text files; you do not need a plugin or a particular AI model.
+
+### Try it in one conversation
+
+On GitHub, click **Code → Download ZIP**, then unzip the folder. Open that folder in your AI agent and send:
+
+```text
+Read profiles/general.md and use the GUS Protocol for this conversation. Reuse any partner details already available. During setup, present the available profiles and ask about my main uses if unknown; help with a clear request first. Ask only for missing interaction preferences and apply the voice component when relevant. If I choose a specialist profile or my task clearly calls for one, read protocol.md and that profile. Do not install anything or change my default working instructions.
+```
+
+If you use a chatbot that accepts file uploads, attach `profiles/general.md` instead and ask it to follow the attached instructions. Start with General / everyday use; the agent will introduce the other profiles. If you choose a specialist profile, also provide `protocol.md` and that profile's file. Include `components/voice.md` when relevant.
+
+### Use GUS in future conversations
+
+If your agent can read local files and edit its saved instructions, keep the unzipped folder somewhere permanent and send:
+
+```text
+Set up GUS as my default working style. Read profiles/general.md in this folder. Find the personal instruction file this app actually loads, preserve its existing content, and add an instruction to read the General profile using its absolute local path. Keep specialist profiles available for relevant tasks. Reuse my existing partner record, and read the Partner layer in protocol.md before saving any missing preferences. Verify the saved instructions and tell me how to check them in a fresh conversation. If this app cannot load these files across conversations, explain that instead of claiming setup succeeded.
+```
+
+For a chatbot with saved custom instructions, you can paste the contents of `profiles/general.md` there if they fit. References to other files still need those files to be available in the conversation. Otherwise, attach the General profile when starting a new chat.
 
 ## Choose a profile
 
@@ -20,6 +48,8 @@ During first partner setup, the agent presents all five profiles and asks what y
 
 [Voice](components/voice.md) applies to every profile. Partner setup records the person's main interaction mode and activates the appropriate voice instructions. Dictating a message and listening to a response are separate preferences.
 
+For software development, ask the agent to read `protocol.md` and `profiles/software-development.md`. Together, trace the relevant behavior and agree on a short sequence of working changes. The agent builds and checks one increment, shows the behavior and important code, then stops for discussion and a go-ahead. Pair review and rubber ducking run in both directions. Later steps adapt to what you learn; approving the outline does not waive the pauses.
+
 ## How the collaboration works
 
 The [shared protocol](protocol.md#2-layers-and-transitions) defines five layers:
@@ -28,7 +58,7 @@ The [shared protocol](protocol.md#2-layers-and-transitions) defines five layers:
 2. **Context:** establish the goal, audience, and requirements; read requested material, then invite thoughts or offer help going through it. Reflection is optional.
 3. **Investigation:** use that context to locate the starting point, choose useful support, and agree on the next unit of work.
 4. **Production and learning:** explain or build the accepted increment, check it, show it, and pause for discussion and a go-ahead before the next.
-5. **Validation (optional):** offer relevant feedback or rehearsal; the partner decides what to change.
+5. **Validation (optional):** offer relevant feedback or rehearse with a reviewer playing the intended stakeholder or recipient. The partner gets a chance to explain their choices and important reasoning before the agent supplies answers, supporting their command of the work. The partner decides what to change.
 
 Resume at the earliest unresolved point. Reuse available context and do not turn a specific mechanical request into a new interview.
 
@@ -39,20 +69,6 @@ General distills this approach for everyday use: answer direct questions directl
 The default is collaborative: agree on meaningful increments for lengthy work, complete and show one increment, then pause for the partner's thoughts and a go-ahead before starting the next. An approved multi-step plan still includes those pauses.
 
 For an emergency or another task that needs uninterrupted execution, say something like: **“Use fire-and-forget mode to finish the work in the agreed outline.”** The agent completes that scope without learning questions or intermediate review pauses, retaining normal verification and scope boundaries. The fallback ends with the task; subsequent tasks return to collaboration. See [the core's mode rules](protocol.md#21-working-modes).
-
-## Try it in a fresh conversation
-
-Download or clone this repository and make the folder available to your agent. From the repository folder, paste:
-
-```text
-Read profiles/general.md and use the GUS Protocol for this conversation. Reuse any partner details already available. During setup, present the available profiles and ask about my main uses if unknown; help with a clear request first. Ask only for missing interaction preferences and apply the voice component when relevant. If I choose a specialist profile or my task clearly calls for one, read protocol.md and that profile. Do not install anything or change my default working instructions.
-```
-
-For a specialist setting, ask the agent to read `protocol.md` plus `profiles/school.md`, `profiles/university.md`, `profiles/workplace.md`, or `profiles/software-development.md`. If the agent is working outside the repository folder, include the folder's path. The agent must be able to read the required files; otherwise supply the General profile, or the core and selected specialist profile, as attachments or text. Include the voice component when relevant.
-
-For software development, ask the agent to read `protocol.md` and `profiles/software-development.md`. Together, trace the relevant behavior and agree on a short sequence of working changes. The agent builds and checks one increment, shows the behavior and important code, then stops for discussion and a go-ahead. Pair review and rubber ducking run in both directions. Later steps adapt to what you learn; approving the outline does not waive the pauses.
-
-The files are ordinary Markdown instructions. They do not depend on a particular model, a skill installer, or integrations. A skill wrapper can be added later if useful for discovery; it would load these instructions rather than define a second protocol.
 
 ## Partner persistence
 
